@@ -26,11 +26,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 1
+
+      - name: Verify checked-out revision
+        shell: bash
+        run: |
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          grep -q -- "--game-scale" src/style.css
+          grep -q "DISPLAY" src/core/Game.ts
 
       - name: Setup Node
         uses: actions/setup-node@v7
         with:
-          node-version: lts/*
+          node-version: 22
           cache: npm
 
       - name: Install dependencies
@@ -38,6 +48,13 @@ jobs:
 
       - name: Build game
         run: npm run build
+
+      - name: Verify production bundle
+        shell: bash
+        run: |
+          grep -R -q -- "--game-scale" dist/assets
+          grep -R -q -- "width:1280px;height:720px" dist/assets
+          printf '{"commit":"%s"}\n' "$GITHUB_SHA" > dist/build-info.json
 
       - name: Configure Pages
         uses: actions/configure-pages@v6
