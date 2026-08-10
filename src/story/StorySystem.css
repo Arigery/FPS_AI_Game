@@ -1,0 +1,14 @@
+.story-portrait {
+  width: 123%;
+  height: 123%;
+  left: -11.5%;
+  bottom: -31%;
+}
+
+@media (max-width: 700px) {
+  .story-portrait {
+    width: 159.5%;
+    left: -28%;
+    bottom: -20%;
+  }
+}
