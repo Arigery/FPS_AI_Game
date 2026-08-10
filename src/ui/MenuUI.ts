@@ -29,7 +29,7 @@ export class MenuUI {
     this.panel(`STAGE ${stage} 기록`,`${content}<button id="score-stage-back" class="secondary">스테이지 기록 선택으로</button><button class="back secondary">메인 메뉴로</button>`);this.root.querySelector('#score-stage-back')!.addEventListener('click',()=>this.showScores());this.bindBack();
   }
   hide(){this.root.style.display='none';}
-  showThanks(confirm:()=>void){this.panel('\ud6c8\ub828 \uc644\ub8cc','<div class="thanks-message"><small>THANK YOU FOR PLAYING</small><p>Deemo\ub97c \ud50c\ub808\uc774\ud574\uc8fc\uc154\uc11c \uac10\uc0ac\ud569\ub2c8\ub2e4</p><b>\uac1c\ubc1c\uc790 : Nick_Hong</b></div><button id="thanks-confirm">\ud655\uc778</button>');this.root.querySelector('#thanks-confirm')!.addEventListener('click',confirm);}
+  showThanks(confirm:()=>void){this.panel('\ud6c8\ub828 \uc644\ub8cc','<div class="thanks-message"><small>THANK YOU FOR PLAYING</small><p>Hyper FPS\ub97c \ud50c\ub808\uc774\ud574\uc8fc\uc154\uc11c \uac10\uc0ac\ud569\ub2c8\ub2e4</p><b>\uac1c\ubc1c\uc790 : Nick_Hong</b><small>TO BE CONTINUED...</small></div><button id="thanks-confirm">\ud655\uc778</button>');this.root.querySelector('#thanks-confirm')!.addEventListener('click',confirm);}
   showStageMessage(stage:2|3|4){this.panel(`STAGE ${stage}`,`<p class="coming-soon">스테이지가 해금되었습니다.</p><button id="stage-back" class="secondary">스테이지 선택으로</button>`);this.root.querySelector('#stage-back')!.addEventListener('click',()=>this.showStages());}
   refreshProgress(progress:GameProgress){this.progress=progress;}
 }

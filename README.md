@@ -1,4 +1,4 @@
-# DEEMO — 웹 기반 하이퍼 FPS
+# Hyper FPS — 웹 기반 하이퍼 FPS
 
 ## 게임 개요
 
