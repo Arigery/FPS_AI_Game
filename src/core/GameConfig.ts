@@ -8,3 +8,9 @@ export const CFG = {
   tracerLifetime: .8, meleeRange: 1.8, meleeAngle: 90, meleeDuration: .5,
   meleeHitStart: .15, meleeHitWindow: .1
 } as const;
+
+export const DISPLAY = {
+  width: 1280,
+  height: 720,
+  aspect: 16 / 9
+} as const;
