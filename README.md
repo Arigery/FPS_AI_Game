@@ -6,6 +6,12 @@ Three.js, TypeScript, Vite로 제작한 PC 브라우저용 1인칭 하이퍼 FPS
 
 상세한 내용은 04_AI_활용_기술_문서.md에서 볼 수 있습니다.
 
+## 시연 연상
+
+플레이 영상은 아래 유튜브 링크를 통해 시청할 수 있습니다.
+
+https://youtu.be/GA5ifE5WAuY?si=CT6vGtOq_LW1EH_N
+
 ## 준비 및 실행
 
 ### 브라우저에서 바로 플레이
